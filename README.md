@@ -71,6 +71,12 @@ Treat it that way.
 - MSVC is **not** supported (GNU assembler syntax and `unsigned __int128`).
 - A Bitcoin address and a Stratum pool endpoint.
 
+## Architecture
+
+New to the code? Read [ARCHITECTURE.md](ARCHITECTURE.md) — thread model, data
+flow from Stratum JSON to a hash, the midstate trick, and why engine selection
+is benchmarked at your thread count.
+
 ## Build
 
 ```bash
@@ -235,6 +241,7 @@ a fixed priority list.
 src/miner.c      Stratum client, threading, engine selection, UI
 src/sha256ni.S   SHA-256d in x86-64 assembly (SHA-NI), Windows + SysV ABI
 Makefile         build for Linux and MinGW-w64
+ARCHITECTURE.md     how the pieces fit together, and why (English)
 ```
 
 ## Known limitations

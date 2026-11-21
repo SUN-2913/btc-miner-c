@@ -72,6 +72,12 @@ multi-buffer, масштабирование SMT, гибридные P/E-ядр�
 - MSVC **не поддерживается** (синтаксис GNU-ассемблера и `unsigned __int128`).
 - Bitcoin-адрес и адрес Stratum-пула.
 
+## Архитектура
+
+Если открываете код впервые — начните с [ARCHITECTURE.ru.md](ARCHITECTURE.ru.md):
+модель потоков, путь данных от JSON пула до хеша, суть midstate и почему выбор
+движка замеряется на вашем числе потоков.
+
 ## Сборка
 
 ```bash
@@ -236,7 +242,7 @@ btc-miner-c -a bc1qвашадрес... -p solo.ckpool.org:3333 -t 10 -w i9
 src/miner.c      Stratum-клиент, потоки, выбор движка, интерфейс
 src/sha256ni.S   SHA-256d на x86-64 ассемблере (SHA-NI), ABI Windows + SysV
 Makefile         сборка для Linux и MinGW-w64
-```
+ARCHITECTURE.ru.md  как части складываются вместе и почему
 
 ## Известные ограничения
 
