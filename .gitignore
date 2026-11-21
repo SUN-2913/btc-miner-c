@@ -1,0 +1,10 @@
+# binaries / objects
+btc-miner-c
+btc-miner-c.exe
+*.o
+*.obj
+build/
+
+# runtime artifacts
+BLOCK_FOUND.txt
+*.log
